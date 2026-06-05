@@ -39,7 +39,7 @@
 
 body {
     font-family: 'Maple Mono', 'Maple Mono NF', 'Maple Mono CN', 'Maple Mono NF CN', 'Maple Mono loaded', 'JetBrains Mono', 'JetBrains Mono loaded', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    line-height: 1.2;
     color: var(--dark-color);
     background: var(--light-color);
     animation: blurToClear 1s ease-in-out;
@@ -283,7 +283,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: var(--light-color);
-    padding: 12px 25px;
+    padding: 12px 20px;
     border-radius: 30px;
     border: 3px solid var(--blue-color);
     text-decoration: none;
