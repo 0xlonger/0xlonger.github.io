@@ -139,7 +139,7 @@ body {
 #navbar ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     width: 0;
     height: 2px;
@@ -153,6 +153,32 @@ body {
 }
 #navbar ul li a:hover::after {
     width: 80%; /* 底部流动光效  */
+}
+#nav-products .submenu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    background: var(--light-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px 10px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+#nav-products .submenu:hover {
+    box-shadow: 
+        0 0 40px rgba(0, 161, 214, 0.8), /* 主发光层 */
+        0 0 50px rgba(0, 100, 255, 0.6); /* 二次光晕层  */
+}
+#nav-products:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+#nav-products .submenu li {
+    padding: 10px 0;
 }
 .select_btn {
     border: none;
