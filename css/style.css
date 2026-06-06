@@ -23,6 +23,12 @@
         --dark-color: #F0F8FF;
         --light-color: #00213e;
     }
+    #navbar {
+        border: 1px solid rgba(240, 248, 255, 0.3) !important;
+        background-color: rgba(0, 33, 62, 0.4) !important;
+        box-shadow: rgba(240, 248, 255, 0.25) 0px 5px 15px !important;
+        -webkit-backdrop-filter: rgba(240, 248, 255, 0.25) 0px 5px 15px !important;
+    }
 }
 
 
@@ -68,9 +74,19 @@ body {
 /* 导航样式 */
 #navbar {
     position: fixed;
-    width: 100%;
+    width: 95%;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
+    margin: 15px auto;
+    backdrop-filter: blur(10px); /* 毛玻璃模糊效果  */
+    -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
+    border-radius: 2rem;
+    border: 1px solid rgba(240, 248, 255, 0.3);
+    background-color: rgba(240, 248, 255, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    -webkit-backdrop-filter: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     transition: all 0.5s ease; /* 平滑过渡效果 */
 }
 /* 导航栏发光动画 */
@@ -78,41 +94,7 @@ body {
     backdrop-filter: blur(15px); /* 毛玻璃模糊效果加强  */
     box-shadow: 
         0 0 40px rgba(0, 161, 214, 0.8), /* 主发光层 */
-        0 0 50px rgba(0, 100, 255, 0.6); /* 二次光晕层  */
-}
-/* 底部流动光效 */
-#navbar::before {
-    display: none;
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--blue-color),
-        var(--pink-color),
-        transparent
-    );
-    background-size: 200% auto;
-    animation: lightFlow 3s linear infinite; /* 流动光效  */
-    -webkit-animation: lightFlow 3s linear infinite;
-    opacity: 0.7;
-    z-index: 1001;
-}
-#navbar:hover::before {
-    display: block;
-}
-/* 流动光效动画 */
-@keyframes lightFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 200% 50%;
-    }
+        0 0 50px rgba(0, 100, 255, 0.6) !important; /* 二次光晕层  */
 }
 #navbar .container {
     display: flex;
@@ -123,18 +105,12 @@ body {
 .logo {
     display: flex;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: var(--dark-color);
     border-radius: 1.8rem;
-    box-shadow: #00000044 0px 2px 10px;
     padding: 5px 20px;
-    backdrop-filter: blur(10px); /* 毛玻璃模糊效果  */
-    -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
-}
-.logo:hover {
-    box-shadow: var(--blue-color) 0px 2px 15px;
 }
 .logo span {
     margin-right: 15px;
@@ -149,14 +125,7 @@ body {
 #navbar ul {
     display: flex;
     list-style: none;
-    border-radius: 20px;
-    box-shadow: #00000044 0px 2px 10px;
     padding: 7px 5px;
-    backdrop-filter: blur(10px); /* 毛玻璃模糊效果  */
-    -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
-}
-#navbar ul:hover {
-    box-shadow: var(--blue-color) 0px 2px 15px;
 }
 /* 导航链接发光特效 */
 #navbar ul li a {
