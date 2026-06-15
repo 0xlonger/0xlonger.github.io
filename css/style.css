@@ -31,6 +31,31 @@
     }
 }
 
+/* 用户手动选择亮色模式（覆盖系统偏好） */
+html[data-theme="light"] {
+    --dark-color: #00213e;
+    --light-color: #F0F8FF;
+}
+html[data-theme="light"] #navbar {
+    border: 1px solid rgba(240, 248, 255, 0.3) !important;
+    background-color: rgba(240, 248, 255, 0.4) !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    -webkit-backdrop-filter: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+}
+
+/* 用户手动选择暗色模式 */
+html[data-theme="dark"] {
+    --dark-color: #F0F8FF;
+    --light-color: #00213e;
+    --golden-color: #dfbc00;
+}
+html[data-theme="dark"] #navbar {
+    border: 1px solid rgba(240, 248, 255, 0.3) !important;
+    background-color: rgba(0, 33, 62, 0.4) !important;
+    box-shadow: rgba(240, 248, 255, 0.25) 0px 5px 15px;
+    -webkit-backdrop-filter: rgba(240, 248, 255, 0.25) 0px 5px 15px;
+}
+
 
 /* 字体 */
 @font-face {
