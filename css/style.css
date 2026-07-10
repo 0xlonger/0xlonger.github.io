@@ -27,7 +27,6 @@
         border: 1px solid rgba(240, 248, 255, 0.3) !important;
         background-color: rgba(0, 33, 62, 0.4) !important;
         box-shadow: rgba(240, 248, 255, 0.25) 0px 5px 15px !important;
-        -webkit-backdrop-filter: rgba(240, 248, 255, 0.25) 0px 5px 15px !important;
     }
 }
 
@@ -40,7 +39,6 @@ html[data-theme="light"] #navbar {
     border: 1px solid rgba(240, 248, 255, 0.3) !important;
     background-color: rgba(240, 248, 255, 0.4) !important;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-    -webkit-backdrop-filter: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
 /* 用户手动选择暗色模式 */
@@ -53,7 +51,6 @@ html[data-theme="dark"] #navbar {
     border: 1px solid rgba(240, 248, 255, 0.3) !important;
     background-color: rgba(0, 33, 62, 0.4) !important;
     box-shadow: rgba(240, 248, 255, 0.25) 0px 5px 15px;
-    -webkit-backdrop-filter: rgba(240, 248, 255, 0.25) 0px 5px 15px;
 }
 
 
@@ -111,7 +108,6 @@ body {
     border: 1px solid rgba(240, 248, 255, 0.3);
     background-color: rgba(240, 248, 255, 0.4);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-    -webkit-backdrop-filter: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     transition: all 0.5s ease; /* 平滑过渡效果 */
 }
 /* 导航栏发光动画 */
@@ -420,6 +416,7 @@ body {
     width: 80%;
     height: auto;
     max-width: 200px;
+    margin-bottom: 20px;
     object-fit: cover;
     transition: all 0.5s ease;
 }

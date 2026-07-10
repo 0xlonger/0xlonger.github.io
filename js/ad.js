@@ -1,4 +1,4 @@
-fetch('/ad.html')
+fetch('/partials/ad.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('ad').innerHTML = data;

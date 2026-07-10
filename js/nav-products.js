@@ -1,4 +1,4 @@
-fetch('/nav-products.html')
+fetch('/partials/nav-products.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('nav-products').innerHTML = data;
