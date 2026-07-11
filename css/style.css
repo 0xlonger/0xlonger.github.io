@@ -790,6 +790,81 @@ footer ul li a:hover::after {
 
 
 
+.notfound {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+/* 左侧渐变遮罩：从左边的纯色 → 右边透明，露出背景图 */
+.notfound::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        var(--light-color) 0%,
+        var(--light-color) 25%,
+        transparent 75%
+    );
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+
+.notfound-left {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notfound-code {
+    font-size: 8rem;
+    font-weight: 900;
+    width: fit-content;
+    color: var(--blue-color);
+    text-shadow: 0 0 30px rgba(0, 174, 236, 0.5);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.notfound-code:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 40px rgba(0, 161, 214, 0.8);
+}
+
+.notfound-title {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.notfound-subtitle {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.notfound-left .btn {
+    width: fit-content;
+}
+
+
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -876,6 +951,36 @@ footer ul li a:hover::after {
         border-top: var(--dark-color) 1px solid;
         margin-top: 10px;
         padding-top: 10px;
+    }
+    .notfound::before {
+        background: linear-gradient(
+            to top,
+            var(--light-color) 0%,
+            var(--light-color) 40%,
+            transparent 60%,
+            transparent 100%
+        );
+    }
+
+    .notfound {
+        align-items: flex-end;
+        padding-top: 100px;
+    }
+
+    .notfound-left {
+        width: 100%;
+        padding: 0 5%;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .notfound-code {
+        font-size: 5rem;
+    }
+
+    .notfound-title {
+        font-size: 1.8rem;
     }
 }
 
