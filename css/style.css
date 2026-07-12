@@ -96,7 +96,8 @@ body {
 /* 导航样式 */
 #navbar {
     position: fixed;
-    width: 95%;
+    width: 90%;
+    max-width: 1200px;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -434,7 +435,7 @@ body {
     float: right;
 }
 .intro_img:hover {
-    transform: rotate(5deg) scale(1.1);
+    transform: scale(1.1);
     box-shadow: 0 20px 100px var(--blue-color);
 }
 .vertical {
@@ -633,7 +634,7 @@ body {
     background: var(--blue-color); 
     color: var(--light-color);
     box-shadow: 0 20px 100px var(--blue-color);
-    transform: rotate(5deg) scale(1.15);
+    transform: scale(1.15);
 }
 .product-intro h3 {
     padding: 20px 20px 10px;
@@ -923,7 +924,7 @@ footer ul li a:hover::after {
         transform: scale(1.05);
     }
     .product-intro:hover{
-        transform: rotate(2.5deg) scale(1.05);
+        transform: scale(1.05);
     }
     .product-introarea-text {
         width: 100%;
