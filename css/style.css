@@ -815,8 +815,9 @@ footer ul li a:hover::after {
     background: linear-gradient(
         to right,
         var(--light-color) 0%,
-        var(--light-color) 25%,
-        transparent 75%
+        var(--light-color) 10%,
+        transparent 60%,
+        transparent 100%
     );
     z-index: 1;
     transition: background 0.5s ease;
@@ -956,7 +957,7 @@ footer ul li a:hover::after {
         background: linear-gradient(
             to top,
             var(--light-color) 0%,
-            var(--light-color) 40%,
+            var(--light-color) 10%,
             transparent 60%,
             transparent 100%
         );

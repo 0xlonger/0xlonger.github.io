@@ -2,7 +2,7 @@ const notFoundPageResources = [
     {
         image: '/assets/images/backgrounds/404/范进中举.webp',
         mobileImage: '/assets/images/backgrounds/404/范进中举.webp', 
-        title: '“噫！不好！页面不见了！”',
+        title: '噫！不好！页面不见了！',
         subtitle: '说着，往后一跤跌倒，牙关咬紧，不省人事。',
         button: '返回首页',
         pageTitle: '404 噫！不好！页面不见了！'
@@ -19,9 +19,17 @@ const notFoundPageResources = [
         image: '/assets/images/backgrounds/404/郝哥.webp',
         mobileImage: '/assets/images/backgrounds/404/郝哥.webp',
         title: '我开网站的，能给你不存在的页面？',
-        subtitle: '404，找不到。',
+        subtitle: '404，找不到。你要不要吧！',
         button: '哥们儿，回首页咋样啊？',
         pageTitle: '404 找不到页面'
+    },
+    {
+        image: '/assets/images/backgrounds/404/你被骗了.webp',
+        mobileImage: '/assets/images/backgrounds/404/你被骗了.webp',
+        title: '你被骗了！',
+        subtitle: '这个网页不存在！',
+        button: '返回首页',
+        pageTitle: '404 你被骗了！'
     }
 ];
 
