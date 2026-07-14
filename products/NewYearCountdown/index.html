@@ -9,23 +9,23 @@
 </head>
 <body>
     <!--导航栏-->
-    <nav id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="container">
             <div class="logo">
                 <span>龙ger_longer</span>
-                <div class="path">
-                    <a href="/" class="link">首页</a>
-                    /
-                    <a href="/products" class="link">产品</a>
-                    /
-                    <a href="#" class="link">解冻倒计时</a>
-                </div>
             </div>
+            <p class="path">
+                <a href="/" class="link">首页</a>
+                /
+                <a href="/products" class="link">产品</a>
+                /
+                <a href="#" class="link">解冻倒计时</a>
+            </p>
             <ul>
-                <li><a href="/">首页</a></li>
-                <li id="nav-products"></li>
-                <li><a href="#author">社交平台</a></li>
-                <li><a id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
+                <li><a class="btn soft" href="/">首页</a></li>
+                <li id="nav-products" class="nav-products"></li>
+                <li><a class="btn soft" href="#author">社交平台</a></li>
+                <li><a class="btn soft" id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
             </ul>
         </div>
     </nav>
@@ -36,7 +36,7 @@
             <img src="/assets/images/icons/NewYearCountdown/icon.png" alt="icon" class="product_img" style="filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));">
             <h1><b>解冻倒计时</b></h1>
             <p>~~~耶~咦~耶~咦~耶~咦~耶~哈~吼~~~</p>
-            <a href="download" class="btn">前往下载</a>
+            <a href="download" class="btn glass">前往下载</a>
         </div>
     </header>
 
@@ -59,6 +59,16 @@
                     </div>
                     <img src="/assets/images/screenshots/NewYearCountdown/gui-fullscreen.webp" alt="pic" class="intro_img">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!--B站视频-->
+    <section id="bilibili_video" class="section light-bg">
+        <div class="container">
+            <h2><b>B站视频</b></h2>
+            <div class="embed-wrapper ratio-16-9">
+                <iframe src="https://player.bilibili.com/player.html?bvid=BV1HGigBQEBi" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="embed-content"></iframe>
             </div>
         </div>
     </section>
@@ -94,7 +104,7 @@
             <img src="/assets/images/icons/NewYearCountdown/icon.png" alt="icon" class="product_img" style="filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));">
             <h1><b>解冻倒计时</b></h1>
             <p>~~~耶~咦~耶~咦~耶~咦~耶~哈~吼~~~</p>
-            <a href="download" class="btn">前往下载</a>
+            <a href="download" class="btn glass">前往下载</a>
         </div>
     </section>
 

@@ -10,82 +10,27 @@
 <body>
 
     <!-- 导航栏 -->
-    <nav id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="container">
             <div class="logo">
                 <span>龙ger_longer</span>
-                <div class="path">
-                    <a href="/" class="link">首页</a>
-                    /
-                    <a href="#" class="link">产品展示</a>
-                </div>
             </div>
+            <p class="path">
+                <a href="/" class="link">首页</a>
+                /
+                <a href="#" class="link">产品展示</a>
+            </p>
             <ul>
-                <li><a href="/">首页</a></li>
-                <li><a href="#products">产品</a></li>
-                <li><a href="#about">关于Me</a></li>
-                <li><a id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
+                <li><a class="btn soft" href="/">首页</a></li>
+                <li><a class="btn soft" href="#products">产品</a></li>
+                <li><a class="btn soft" href="#about">关于Me</a></li>
+                <li><a class="btn soft" id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- 产品展示 -->
-    <section id="products" class="section light-bg">
-        <div class="container">
-            <h2><b>产品展示</b></h2>
-            <div class="projects-grid">
-                <a href="Disk-Squeezer" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/Disk-Squeezer/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>硬盘榨干器</h3>
-                        <p>可以榨干电脑磁盘空间，小心使用，可以给自己的盆友逝逝(doge</p>
-                    </div>
-                </a>
-                <a href="Universal-Timer" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/Universal-Timer/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>万能倒计时</h3>
-                        <p>实用的倒计时工具，可以清楚地直到距离目标时间剩余的时间</p>
-                    </div>
-                </a>
-                <a href="UBackup" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/UBackup/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>U备份</h3>
-                        <p>实用的U盘备份工具，可以自动将新增驱动器备份到指定目录</p>
-                    </div>
-                </a>
-                <a href="MaliciousOS" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/MaliciousOS/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>MaliciousOS</h3>
-                        <p>超级无敌流氓操作系统，开机满屏广告，体验流氓软件的滋味(doge</p>
-                    </div>
-                </a>
-                <a href="QuickNorthKorea" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/QuickNorthKorea/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>一键恩情</h3>
-                        <p>一键感受将军的恩情！ \o/</p>
-                    </div>
-                </a>
-                <a href="QuickMAGA" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/QuickMAGA/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>一键MAGA</h3>
-                        <p>一键感受 MAGA 们对 Donald J. Trump 的热情！</p>
-                    </div>
-                </a>
-                <a href="NewYearCountdown" target="_blank" class="project-card">
-                    <img src="/assets/images/icons/NewYearCountdown/icon.png" alt="产品图片">
-                    <div class="project-card-content">
-                        <h3>解冻倒计时</h3>
-                        <p>~~~耶~咦~耶~咦~耶~咦~耶~哈~吼~~~</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+    <section id="products" class="section light-bg" style="padding-top: 128px"></section>
 
     <!-- 关于Me -->
     <section id="about" class="section">
@@ -119,6 +64,7 @@
     <footer id="footer"></footer>
 
     <script src="/js/script.js"></script>
+    <script src="/js/products.js"></script>
     <script src="/js/ad.js"></script>
     <script src="/js/footer.js"></script>
 </head>

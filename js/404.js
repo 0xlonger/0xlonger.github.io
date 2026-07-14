@@ -20,7 +20,7 @@ const notFoundPageResources = [
         mobileImage: '/assets/images/backgrounds/404/郝哥.webp',
         title: '我开网站的，能给你不存在的页面？',
         subtitle: '404，找不到。你要不要吧！',
-        button: '哥们儿，回首页咋样啊？',
+        button: '回首页行吗？',
         pageTitle: '404 找不到页面'
     },
     {

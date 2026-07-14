@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>龙ger_longer | 404 页面投稿</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="../favicon.ico">
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="container">
             <div class="logo">
                 <span>龙ger_longer</span>
-                <div class="path">
-                    <a href="/" class="link">首页</a>
-                    /
-                    <a href="#" class="link">广告投放</a>
-                </div>
             </div>
+            <p class="path">
+                <a href="/" class="link">首页</a>
+                /
+                <a href="#" class="link">广告投放</a>
+            </p>
             <ul>
-                <li><a href="/">首页</a></li>
-                <li id="nav-products"></li>
-                <li><a href="#about">关于Me</a></li>
-                <li><a id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
+                <li><a class="btn soft" href="/">首页</a></li>
+                <li id="nav-products" class="nav-products"></li>
+                <li><a class="btn soft" href="#about">关于Me</a></li>
+                <li><a class="btn soft" id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="section light-bg" style="margin-top: 30px;">
+    <section class="section light-bg" style="padding-top: 128px">
         <div class="container">
             <h2>404 页面投稿</h2>
             <div class="product-intros">
@@ -38,7 +38,7 @@
                     <br>
                     &#12288;&#12288;我们的 404 页面大体可以分为两个部分，一是文字部分，二是背景图部分。文字部分包括 404 页面标题、在 404 页面上展示的文本和小文本以及返回首页的按钮文本；背景图部分则是 404 页面在桌面端上的背景图和移动端上的背景图。当用户访问不存在的页面时，404 页面会随机显示一个背景图，并显示相应的文字。
                     <br>
-                    &#12288;&#12288;如果您要投稿，请加入我们的 QQ 群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=2mUCXsTzLJcxpmMGdOPLDK7OfXqF1T2b&jump_from=webapi&authKey=oG0ea1lLhm4yBfQM/Ut+9tcGNdsTP2uy1JqkiU3AT+M5Jqt2PcZXZE/RDfI9loYi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="龙ger_longer 交流群" title="龙ger_longer 交流群"></a>（975059383），并向群主表示您想要为 404 页面投稿，然后发送您的桌面端和移动端背景图（若是同一张也可以）和 404 页面标题、文本和小文本（文本需要表达出“找不到该页面”或者“该页面不存在”的意思，如果意思表达不明确，群主会与您商议更合适的文本）、返回首页的按钮文本（按钮文本需要表达出点击这个按钮可以返回首页的意思，若意思表达不明确，群主会与您商议更加合适的方案）。
+                    &#12288;&#12288;如果您要投稿，请加入我们的 QQ 群：<a class="link" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=2mUCXsTzLJcxpmMGdOPLDK7OfXqF1T2b&jump_from=webapi&authKey=oG0ea1lLhm4yBfQM/Ut+9tcGNdsTP2uy1JqkiU3AT+M5Jqt2PcZXZE/RDfI9loYi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="龙ger_longer 交流群" title="龙ger_longer 交流群"></a>（975059383），并向群主表示您想要为 404 页面投稿，然后发送您的桌面端和移动端背景图（若是同一张也可以）和 404 页面标题、文本和小文本（文本需要表达出“找不到该页面”或者“该页面不存在”的意思，如果意思表达不明确，群主会与您商议更合适的文本）、返回首页的按钮文本（按钮文本需要表达出点击这个按钮可以返回首页的意思，若意思表达不明确，群主会与您商议更加合适的方案）。
                     <br>
                     &#12288;&#12288;投稿需要合情、合理、合法、合规。
                     <br>
@@ -58,13 +58,13 @@
         <div class="container">
             <h2><b>404 页面预览</b></h2>
             <h2>桌面端</h2>
-            <div class="video-container">
-                <iframe src="/404.html" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
+            <div id="desktop-wrapper" class="embed-wrapper ratio-16-9">
+                <iframe id="desktop-iframe" src="/404.html" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="embed-content" style="width: 1280px; height: 720px; transform-origin: top left;"></iframe>
             </div>
             <br><br>
             <h2>移动端</h2>
-            <div class="video-container" style="padding-bottom: calc(16 / 9 * 40%); width: 40%;">
-                <iframe src="/404.html" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
+            <div id="mobile-wrapper" class="embed-wrapper ratio-9-16">
+                <iframe id="mobile-iframe" src="/404.html" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="embed-content" style="width: 540px; height: 960px; transform-origin: top left;"></iframe>
             </div>
         </div>
     </section>
@@ -102,6 +102,7 @@
     <footer id="footer"></footer>
 
     <script src="/js/script.js"></script>
+    <script src="script.js"></script>
     <script src="/js/nav-products.js"></script>
     <script src="/js/ad.js"></script>
     <script src="/js/footer.js"></script>

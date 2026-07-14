@@ -9,118 +9,127 @@
 </head>
 <body>
     <!--导航栏-->
-    <nav id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="container">
             <div class="logo">
                 <span>龙ger_longer</span>
-                <div class="path">
-                    <a href="/" class="link">首页</a>
-                    /
-                    <a href="/products" class="link">产品</a>
-                    /
-                    <a href="../" class="link">MaliciousOS</a>
-                    /
-                    <a href="#" class="link">下载</a>
-                </div>
             </div>
+            <p class="path">
+                <a href="/" class="link">首页</a>
+                /
+                <a href="/products" class="link">产品</a>
+                /
+                <a href="../" class="link">MaliciousOS</a>
+                /
+                <a href="#" class="link">下载</a>
+            </p>
             <ul>
-                <li><a href="/">首页</a></li>
-                <li id="nav-products"></li>
-                <li><a href="#author">社交平台</a></li>
-                <li><a id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
+                <li><a class="btn soft" href="/">首页</a></li>
+                <li id="nav-products" class="nav-products"></li>
+                <li><a class="btn soft" href="#author">社交平台</a></li>
+                <li><a class="btn soft" id="theme-toggle" href="javascript:void(0)" title="切换主题">🌓</a></li>
             </ul>
         </div>
-        <div class="container">
+        <div id="author-button-container" class="container">
             <ul style="margin: auto;">
-                <li><button id="longer_SYSTEM_btn" class="select_btn selected" onclick="toLongerToggleDiv()">龙ger_longer 系统</button></li>
-                <li><button id="WinSxS-NT_SYSTEM_btn" class="select_btn" onclick="toWinSxSNTToggleDiv()">WinSxS-NT 系统</button></li>
-                <li><button id="_360_SYSTEM_btn" class="select_btn" onclick="to_360_ToggleDiv()">360度无死角滑稽君 系统</button></li>
-                <li><button id="mougou666_SYSTEM_btn" class="select_btn" onclick="to_mougou666_ToggleDiv()">mougou666 系统</button></li>
-                <li><button id="HandaiGird_SYSTEM_btn" class="select_btn" onclick="to_HandaiGird_ToggleDiv()">寒带gird 系统</button></li>
-                <li><button id="Chengzhi_SYSTEM_btn" class="select_btn" onclick="to_Chengzhi_ToggleDiv()">乗芷 系统</button></li>
+                <li><button id="longer_SYSTEM_btn" class="btn soft" data-author="龙ger_longer" aria-selected="true">龙ger_longer 系统</button></li>
+                <li><button id="WinSxS-NT_SYSTEM_btn" class="btn soft" data-author="WinSxS-NT">WinSxS-NT 系统</button></li>
+                <li><button id="_360_SYSTEM_btn" class="btn soft" data-author="360度无死角滑稽君">360度无死角滑稽君 系统</button></li>
+                <li><button id="mougou666_SYSTEM_btn" class="btn soft" data-author="mougou666">mougou666 系统</button></li>
+                <li><button id="HandaiGird_SYSTEM_btn" class="btn soft" data-author="寒带gird">寒带gird 系统</button></li>
+                <li><button id="Chengzhi_SYSTEM_btn" class="btn soft" data-author="乗芷">乗芷 系统</button></li>
             </ul>
         </div>
     </nav>
 
     <!--主页banner-->
     <header id="top" class="banner" style="background: url(/assets/images/backgrounds/MaliciousOS/deploying-4percent.webp); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; overflow-x: scroll; border-radius: 0; padding-top: 15%;">
-        <div class="container" id="longer_MaliciousOS7_Div">
+        <div class="container system-panel" data-author="龙ger_longer">
             <img src="/assets/images/icons/MaliciousOS/icon-lgr.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 7</b></h1>
             <p>（龙ger_longer 制作）</p>
-            <a href="https://www.123912.com/s/oNPGTd-UA7P3" target="_blank" class="btn">123网盘(ISO和WIM文件)</a>
+            <a href="https://www.123912.com/s/oNPGTd-UA7P3" target="_blank" class="btn glass">123网盘(ISO和WIM文件)</a>
             <br><br>
-            <a href="https://share.feijipan.com/s/HRNwXWsk" target="_blank" class="btn">小飞机网盘(ISO和WIM文件)<br>(WIM, ISO->ZIP 2个分卷)</a>
+            <a href="https://share.feijipan.com/s/HRNwXWsk" target="_blank" class="btn glass">小飞机网盘(ISO和WIM文件)<br>(WIM, ISO->ZIP 2个分卷)</a>
             <br><br>
-            <a href="https://realpan.iamexrfy.top/s/X0FA" target="_blank" class="btn">ExRFy云盘(ISO和WIM文件)<br>(感谢ExRFy提供的云盘存储服务)</a>
+            <a href="https://realpan.iamexrfy.top/s/X0FA" target="_blank" class="btn glass">ExRFy云盘(ISO和WIM文件)<br>(感谢ExRFy提供的云盘存储服务)</a>
         </div>
-        <div class="container" id="longer_MaliciousOS10_Div">
+
+        <div class="container system-panel" data-author="龙ger_longer">
             <img src="/assets/images/icons/MaliciousOS/icon-lgr.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 10</b></h1>
             <p>（龙ger_longer 制作）</p>
-            <a href="https://pan.huang1111.cn/s/YLol5hA" target="_blank" class="btn">Huang1111网盘(ISO文件)</a>
+            <a href="https://pan.huang1111.cn/s/YLol5hA" target="_blank" class="btn glass">Huang1111网盘(ISO文件)</a>
             <br><br>
-            <a href="https://share.feijipan.com/s/HRNwXWsk" target="_blank" class="btn">小飞机网盘(ISO和WIM文件)<br>(ISO->ZIP 2个分卷)</a>
+            <a href="https://share.feijipan.com/s/HRNwXWsk" target="_blank" class="btn glass">小飞机网盘(ISO和WIM文件)<br>(ISO->ZIP 2个分卷)</a>
             <br><br>
-            <a href="https://www.123912.com/s/oNPGTd-UA7P3" target="_blank" class="btn">123网盘(ISO和WIM文件)</a>
+            <a href="https://www.123912.com/s/oNPGTd-UA7P3" target="_blank" class="btn glass">123网盘(ISO和WIM文件)</a>
             <br><br>
-            <a href="https://realpan.iamexrfy.top/s/X0FA" target="_blank" class="btn">ExRFy云盘(ISO和WIM文件)<br>(感谢ExRFy提供的云盘存储服务)</a>
+            <a href="https://realpan.iamexrfy.top/s/X0FA" target="_blank" class="btn glass">ExRFy云盘(ISO和WIM文件)<br>(感谢ExRFy提供的云盘存储服务)</a>
         </div>
-        <div class="container" id="longer_MaliciousOS11_Div">
+
+        <div class="container system-panel" data-author="龙ger_longer">
             <img src="/assets/images/icons/MaliciousOS/icon-lgr.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 11</b></h1>
             <p>（龙ger_longer 制作）</p>
-            <a href="https://www.123912.com/s/oNPGTd-UA7P3" target="_blank" class="btn">123网盘(ISO和WIM文件)</a>
+            <a href="https://www.123912.com/s/oNPGTd-UA7P3" target="_blank" class="btn glass">123网盘(ISO和WIM文件)</a>
             <br><br>
-            <a href="https://share.feijipan.com/s/HRNwXWsk" target="_blank" class="btn">小飞机网盘(ISO和WIM文件)<br>(WIM, ISO->ZIP 2个分卷)</a>
+            <a href="https://share.feijipan.com/s/HRNwXWsk" target="_blank" class="btn glass">小飞机网盘(ISO和WIM文件)<br>(WIM, ISO->ZIP 2个分卷)</a>
             <br><br>
-            <a href="https://lgr.lanzoue.com/b00uzcgh9g" target="_blank" class="btn">蓝奏云盘(ISO文件，附带快速重命名工具)<br>(ISO->ZIP 199个分卷)<br>(提取码: long)</a>
+            <a href="https://lgr.lanzoue.com/b00uzcgh9g" target="_blank" class="btn glass">蓝奏云盘(ISO文件，附带快速重命名工具)<br>(ISO->ZIP 199个分卷)<br>(提取码: long)</a>
             <br><br>
-            <a href="https://realpan.iamexrfy.top/s/X0FA" target="_blank" class="btn">ExRFy云盘(ISO和WIM文件)<br>(感谢ExRFy提供的云盘存储服务)</a>
+            <a href="https://realpan.iamexrfy.top/s/X0FA" target="_blank" class="btn glass">ExRFy云盘(ISO和WIM文件)<br>(感谢ExRFy提供的云盘存储服务)</a>
         </div>
-        <div class="container" id="WinSxS-NT_MaliciousOS8_1_Div" style="display: none;">
+
+        <div class="container system-panel hidden" data-author="WinSxS-NT">
             <img src="/assets/images/icons/MaliciousOS/icon.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 8.1</b></h1>
             <p>（WinSxS-NT 制作）</p>
-            <a href="https://pan.huang1111.cn/s/75PEBHg" target="_blank" class="btn">Huang1111网盘(WIM文件)</a>
+            <a href="https://pan.huang1111.cn/s/75PEBHg" target="_blank" class="btn glass">Huang1111网盘(WIM文件)</a>
             <br><br>
-            <a href="https://r4.sgwbox.com/fileshare/?tcid=n3686A122806D5&code=aYObsOfswtlJBmh91V_xmQDHt31TXYjvof2EqplAslNeAKeb&cmd=list" target="_blank" class="btn">拾光坞云盘(WIM文件)<br>(提取码5836)</a>
+            <a href="https://r4.sgwbox.com/fileshare/?tcid=n3686A122806D5&code=aYObsOfswtlJBmh91V_xmQA3vTLArGmNladTLnBGtgXmABkN&cmd=list" target="_blank" class="btn glass">拾光坞云盘(WIM文件)<br>(提取码5836)</a>
         </div>
-        <div class="container" id="WinSxS-NT_MaliciousOS10_Div" style="display: none;">
+
+        <div class="container system-panel hidden" data-author="WinSxS-NT">
             <img src="/assets/images/icons/MaliciousOS/icon.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 10</b></h1>
             <p>（WinSxS-NT 制作）</p>
-            <a href="https://r4.sgwbox.com/fileshare/?tcid=n3686A122806D5&code=aYObsOfswtlJBmh91V_xmQDHt31TXYjvof2EqplAslNeAKeb&cmd=list" target="_blank" class="btn">拾光坞云盘(WIM文件)<br>(提取码5836)</a>
+            <a href="https://r4.sgwbox.com/fileshare/?tcid=n3686A122806D5&code=aYObsOfswtlJBmh91V_xmQA3vTLArGmNladTLnBGtgXmABkN&cmd=list" target="_blank" class="btn glass">拾光坞云盘(WIM文件)<br>(提取码5836)</a>
         </div>
-        <div class="container" id="_360_MaliciousOS7_Div" style="display: none;">
-            <img src="/assets/images/icons/MaliciousOS/icon-360度无死角滑稽君.webp" alt="MaliciousOS_icon.png" class="product_img">
+
+        <div class="container system-panel hidden" data-author="360度无死角滑稽君">
+            <img src="/assets/images/icons/MaliciousOS/icon-360度无死角滑稽君.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 7</b></h1>
             <p>（360度无死角滑稽君 制作）</p>
-            <a href="https://www.123684.com/s/kIMQjv-1ErX" target="_blank" class="btn">123云盘(WIM文件)</a>
+            <a href="https://www.123684.com/s/kIMQjv-1ErX" target="_blank" class="btn glass">123云盘(WIM文件)</a>
         </div>
-        <div class="container" id="_360_MaliciousOS11_Div" style="display: none;">
-            <img src="/assets/images/icons/MaliciousOS/icon-360度无死角滑稽君.webp" alt="MaliciousOS_icon.png" class="product_img">
+
+        <div class="container system-panel hidden" data-author="360度无死角滑稽君">
+            <img src="/assets/images/icons/MaliciousOS/icon-360度无死角滑稽君.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 11</b></h1>
             <p>（360度无死角滑稽君 制作）</p>
-            <a href="https://pan.huang1111.cn/s/6ePMzSN" target="_blank" class="btn">Huang1111网盘(WIM文件)</a>
+            <a href="https://pan.huang1111.cn/s/6ePMzSN" target="_blank" class="btn glass">Huang1111网盘(WIM文件)</a>
         </div>
-        <div class="container" id="mougou666_MaliciousOSXP_Div" style="display: none;">
+
+        <div class="container system-panel hidden" data-author="mougou666">
             <img src="/assets/images/icons/MaliciousOS/icon.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS XP</b></h1>
             <p>（mougou666 制作）</p>
-            <a href="https://www.123865.com/s/5HCfTd-SGiLH" target="_blank" class="btn">123云盘(Ghost文件)</a>
+            <a href="https://www.123865.com/s/5HCfTd-SGiLH" target="_blank" class="btn glass">123云盘(Ghost文件)</a>
         </div>
-        <div class="container" id="HandaiGird_MaliciousOS12_Div" style="display: none;">
+
+        <div class="container system-panel hidden" data-author="寒带gird">
             <img src="/assets/images/icons/MaliciousOS/icon.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 12</b></h1>
             <p>（寒带gird 制作）</p>
-            <a href="https://www.123684.com/s/5HIajv-MZi4H" target="_blank" class="btn">123云盘(ESD文件)<br>(提取码: u1vA)</a>
+            <a href="https://www.123684.com/s/5HIajv-MZi4H" target="_blank" class="btn glass">123云盘(ESD文件)<br>(提取码: u1vA)</a>
         </div>
-        <div class="container" id="Chengzhi_MaliciousOS10Dolby_Div" style="display: none;">
+        
+        <div class="container system-panel hidden" data-author="乗芷">
             <img src="/assets/images/icons/MaliciousOS/icon.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS 10 Dolby增强版</b></h1>
             <p>（乗芷 制作）</p>
-            <a href="https://www.123684.com/s/kcFRjv-Bvbwd" target="_blank" class="btn">123云盘(WIM文件)</a>
+            <a href="https://www.123684.com/s/kcFRjv-Bvbwd" target="_blank" class="btn glass">123云盘(WIM文件)</a>
         </div>
     </header>
 
