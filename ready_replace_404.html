@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>404 - 你寄了</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: #0a0c1c;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Anton', sans-serif;
+            color: #fff;
+            transition: background 1s;
+        }
+
+        .cyber404 {
+            perspective: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .rail {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+            perspective: 900px;
+        }
+
+        .stamp {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #15151e;
+            color: #34e2e2;
+            font-size: 4rem;
+            box-shadow: 0 0 28px #09f5ef88, 0 0 5px #fff;
+            border-radius: 18px;
+            user-select: none;
+            animation: neon 2s alternate infinite, float404 8s infinite linear;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+
+        .stamp:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .stamp:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes neon {
+            0% {
+                box-shadow: 0 0 28px #09f5ef88, 0 0 5px #fff;
+                color: #34e2e2;
+            }
+
+            100% {
+                box-shadow: 0 0 45px #fff7, 0 0 18px #09f5ef;
+                color: #f48fff;
+            }
+        }
+
+        @keyframes float404 {
+            0% {
+                transform: translateY(0) rotateX(0deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotateX(20deg);
+            }
+
+            100% {
+                transform: translateY(0) rotateX(0deg);
+            }
+        }
+
+        .cube-box {
+            margin: 30px auto;
+            width: 130px;
+            height: 130px;
+            perspective: 900px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(30deg);
+            transition: transform 0.4s;
+            animation: spin-cube 7s linear infinite;
+        }
+
+        .cube:hover {
+            animation-play-state: paused;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: rgba(28, 28, 40, 0.96);
+            border: 2px solid #22f0fa;
+            box-shadow: 0 0 8px #fff6;
+            font-size: 3.5rem;
+            color: #38fcfc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            opacity: 0.97;
+        }
+
+        .cube-face:nth-child(1) {
+            transform: rotateY(0deg) translateZ(65px);
+        }
+
+        .cube-face:nth-child(2) {
+            transform: rotateY(180deg) translateZ(65px);
+        }
+
+        .cube-face:nth-child(3) {
+            transform: rotateY(90deg) translateZ(65px);
+        }
+
+        .cube-face:nth-child(4) {
+            transform: rotateY(-90deg) translateZ(65px);
+        }
+
+        .cube-face:nth-child(5) {
+            transform: rotateX(90deg) translateZ(65px);
+        }
+
+        .cube-face:nth-child(6) {
+            transform: rotateX(-90deg) translateZ(65px);
+        }
+
+        @keyframes spin-cube {
+            0% {
+                transform: rotateX(-30deg) rotateY(30deg);
+            }
+
+            100% {
+                transform: rotateX(-30deg) rotateY(390deg);
+            }
+        }
+
+        .desc {
+            font-size: 1.4rem;
+            color: #eee;
+            margin: 10px 0 24px 0;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 12px #0008;
+            user-select: none;
+            text-align: center;
+            min-height: 2.2em;
+        }
+
+        .footer {
+            font-size: 0.88rem;
+            color: #888;
+            margin-top: 30px;
+            opacity: .44;
+            user-select: none;
+            text-align: center;
+        }
+
+        /* 手机端优化 */
+        @media (max-width:600px) {
+            .stamp {
+                width: 60px;
+                height: 60px;
+                font-size: 2.5rem;
+            }
+
+            .cube-box {
+                width: 80px;
+                height: 80px;
+            }
+
+            .cube-face {
+                font-size: 1.4rem;
+                width: 80px;
+                height: 80px;
+            }
+
+            .desc {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cyber404">
+        <div class="rail">
+            <div class="stamp">4</div>
+            <div class="stamp">0</div>
+            <div class="stamp">4</div>
+        </div>
+        <div class="cube-box">
+            <div class="cube" id="cube">
+                <div class="cube-face">4</div>
+                <div class="cube-face">0</div>
+                <div class="cube-face">4</div>
+                <div class="cube-face">0</div>
+                <div class="cube-face">4</div>
+                <div class="cube-face">0</div>
+            </div>
+        </div>
+        <div class="desc">
+            <span id="typewriter"></span>
+        </div>
+        <div class="footer">© 2026 0xlonger | Cyberpunk 404 | <span id="egg" style="cursor:pointer;">?</span></div>
+    </div>
+    <script>
+        // stamp点击效果
+  document.querySelectorAll('.stamp').forEach(stamp=>{
+    stamp.addEventListener('mouseenter',()=>{stamp.style.background='#3131ee';});
+    stamp.addEventListener('mouseleave',()=>{stamp.style.background='#15151e';});
+    stamp.addEventListener('click',()=>{document.body.style.background = '#19132e'; setTimeout(()=>{document.body.style.background='#0a0c1c';},500)});
+  });
+  // 彩蛋：按下KONAMI触发跳转（现在无效果）
+  let kCode = [38,38,40,40,37,39,37,39,66,65], kBuffer=[];
+  document.addEventListener('keydown',e=>{
+    kBuffer.push(e.keyCode);
+    if(kBuffer.length>10)kBuffer.shift();
+    // 彩蛋不跳转
+  });
+  // footer蛋
+  document.getElementById('egg').onclick=function(){
+    alert('赛博朋克404特效出品：ChatGPT x 你本人，继续抽象！\n骚话每次刷新都不一样，精神污染拉满。');
+  }
+  // 精神污染抽象骚话+打字机
+  const texts = [
+    "404！你看到的其实是你内心的空虚。",
+    "页面消失了，就像你昨天的早饭和上次的梦想。",
+    "你点的页面比薛定谔的猫还虚无。",
+    "404宇宙：一切皆为空，唯有你和404同在。",
+    "你追寻的页面，如同你未完成的flag，永远不会实现。",
+    "页面没了，但你点进来的勇气值得点赞。",
+    "此刻，404，下一刻，502，一切皆有可能。",
+    "404页面，不存在的存在，存在的不存在。",
+    "你来到了无之领域，这里连虚空都嫌弃你。",
+    "恭喜你，发现了互联网的缝隙，请不要大声喧哗。",
+    "页面404，命运随机。",
+    "一切皆404，唯有刷新不变。",
+    "你是想打开404，还是404想打开你？",
+    "页面隐身了，别费劲了，连站长都找不到。",
+    "此刻你与404融为一体，你也是虚无。"
+  ];
+  const text = texts[Math.floor(Math.random() * texts.length)];
+  let i = 0;
+  function type() {
+    if(i<=text.length) {
+      document.getElementById('typewriter').innerText = text.slice(0,i);
+      i++;
+      setTimeout(type,35 + Math.random()*35);
+    }
+  }
+  setTimeout(type,500);
+    </script>
+</body>
+
+</html>
