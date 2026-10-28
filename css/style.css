@@ -88,6 +88,12 @@ html[data-theme="dark"] .btn.github {
     font-family: 'Maple Mono loaded';
     src: url('/fonts/Maple\ Mono/MapleMono-NF-CN-Regular.ttf') format('truetype');
 }
+/* 像素字体，只给 LongerMC 卡片用（和 mc.longer.xin 同一个字体） */
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('/fonts/Press\ Start\ 2P/PressStart2P-Regular.woff2') format('woff2');
+    font-display: swap;
+}
 
 
 body {
@@ -869,6 +875,344 @@ footer ul li a:hover {
 
 .notfound-left .btn {
     width: fit-content;
+}
+
+
+
+
+/* 官方推荐：LongerMC 服务器卡片
+   外框跟随本站：圆角、描边、发光、悬停放大
+   里面是 mc.longer.xin 的风格：深色夜空、像素字、硬边按钮、草方块
+   绿色是 MC 站的身份色，只在这张卡片和页脚的“官方”标签里使用 */
+.lmc {
+    --lmc-grass: #63c94a;
+    --lmc-grass-2: #8ae66c;
+    --lmc-text: #eef2f8;
+    --lmc-muted: #8d99ac;
+    --lmc-line: #333d4f;
+    --lmc-pixel: 'Press Start 2P', ui-monospace, monospace;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    margin-top: 36px;
+    overflow: hidden;
+    color: var(--lmc-text);
+    background-color: #0a0d12;
+    background-image:
+        radial-gradient(720px 380px at 82% -12%, rgba(99, 201, 74, 0.16), transparent 62%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: auto, 44px 44px, 44px 44px;
+    border: 2px solid var(--lmc-grass);
+    border-radius: 20px;
+    box-shadow: 0 3px 30px rgba(99, 201, 74, 0.45);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.lmc:hover {
+    transform: scale(1.02);
+    box-shadow: 0 3px 50px rgba(99, 201, 74, 0.7);
+}
+/* 卡片底部的像素山丘 */
+.lmc::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 22H70V12H140V20H210V6H280V16H350V2H420V18H490V10H560V22H630V8H700V18H770V4H840V14H910V24H980V10H1050V18H1120V6H1200V40H0Z' fill='%23142619'/%3E%3Cpath d='M0 30H90V24H180V32H270V20H360V28H450V18H540V30H630V22H720V32H810V20H900V26H990V16H1080V28H1200V40H0Z' fill='%23214a26'/%3E%3C/svg%3E") center bottom / 100% 100% no-repeat;
+}
+.lmc-body {
+    position: relative;
+    z-index: 1;
+    padding: 34px 36px 66px;
+}
+.lmc-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--lmc-muted);
+}
+.lmc-official {
+    padding: 1px 8px;
+    font-weight: 700;
+    color: #08130a;
+    background: var(--lmc-grass);
+    border: 1px solid #0a1207;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+.lmc-wordmark {
+    margin-top: 22px;
+    font-family: var(--lmc-pixel);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+}
+.lmc-wordmark em {
+    font-style: normal;
+    color: var(--lmc-grass-2);
+}
+.lmc h3 {
+    margin-top: 14px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.5;
+    text-wrap: balance;
+}
+.lmc h3 span {
+    color: var(--lmc-grass-2);
+}
+.lmc-desc {
+    max-width: 520px;
+    margin-top: 8px;
+    font-size: 0.92rem;
+    color: var(--lmc-muted);
+}
+/* 服务器地址（同 mc.longer.xin 的地址卡片） */
+.lmc-ip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 460px;
+    margin-top: 22px;
+    padding: 11px 12px 11px 17px;
+    background: linear-gradient(180deg, rgba(25, 32, 44, 0.94), rgba(15, 19, 27, 0.94));
+    border: 1px solid var(--lmc-line);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.lmc-ip::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--lmc-grass-2), #3f8f2f);
+}
+.lmc-ip-text {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    min-width: 0;
+}
+.lmc-label {
+    font-family: var(--lmc-pixel);
+    font-size: 7px;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    color: #76839a;
+}
+.lmc-ip code {
+    font-family: inherit;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    color: #fff;
+    word-break: break-all;
+}
+.lmc-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex: none;
+    padding: 8px 12px;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--lmc-grass-2);
+    background: rgba(99, 201, 74, 0.1);
+    border: 1px solid rgba(99, 201, 74, 0.35);
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+}
+.lmc-copy:hover,
+.lmc-copy.is-copied {
+    color: #fff;
+    background: rgba(99, 201, 74, 0.24);
+}
+.lmc-copy svg,
+.lmc-btn svg {
+    width: 14px;
+    height: 14px;
+    flex: none;
+}
+/* 进入官网按钮 + 在线人数 */
+.lmc-foot {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    margin-top: 24px;
+}
+.lmc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #08130a;
+    text-decoration: none;
+    background: linear-gradient(180deg, #8ae66c 0%, #5fc247 55%, #4fb03a 100%);
+    border: 1px solid #0a1207;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), inset 0 -3px 0 rgba(0, 0, 0, 0.22), 0 5px 0 #2b6a1e;
+    transition: transform 0.12s, box-shadow 0.12s, filter 0.18s;
+}
+.lmc-btn:hover {
+    filter: brightness(1.06);
+}
+.lmc-btn:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.25), 0 1px 0 #2b6a1e;
+}
+.lmc-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.85rem;
+    color: var(--lmc-muted);
+}
+.lmc-live[hidden] {
+    display: none;
+}
+.lmc-live i {
+    width: 8px;
+    height: 8px;
+    background: var(--lmc-grass);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.45), 0 0 12px rgba(99, 201, 74, 0.85);
+}
+.lmc-live.off i {
+    background: #e85d5d;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.45), 0 0 12px rgba(232, 93, 93, 0.6);
+}
+/* 插画：夜空里漂浮的草方块 */
+.lmc-art {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    min-height: 300px;
+    padding: 12px 12px 30px;
+    background:
+        radial-gradient(circle at 50% 54%, rgba(99, 201, 74, 0.24), rgba(99, 201, 74, 0.05) 42%, transparent 66%),
+        radial-gradient(1.5px 1.5px at 12% 16%, rgba(255, 255, 255, 0.55), transparent),
+        radial-gradient(1.5px 1.5px at 34% 8%, rgba(255, 255, 255, 0.35), transparent),
+        radial-gradient(2px 2px at 64% 12%, rgba(255, 255, 255, 0.45), transparent),
+        radial-gradient(1.5px 1.5px at 88% 30%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1.5px 1.5px at 8% 60%, rgba(255, 255, 255, 0.3), transparent);
+}
+.lmc-art svg {
+    width: min(100%, 460px);
+    height: auto;
+    filter: drop-shadow(0 26px 26px rgba(0, 0, 0, 0.4));
+}
+.lmc-tag {
+    position: absolute;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 9px;
+    font-family: var(--lmc-pixel);
+    font-size: 8px;
+    line-height: 1;
+    letter-spacing: 0.8px;
+    color: #c7d0dd;
+    background: rgba(12, 16, 23, 0.9);
+    border: 1px solid var(--lmc-line);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.32);
+}
+.lmc-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--lmc-grass);
+}
+.lmc-tag:first-child {
+    top: 14%;
+    left: 6%;
+}
+.lmc-tag--gold {
+    top: 30%;
+    right: 6%;
+    color: #f2c14e;
+    border-color: rgba(242, 193, 78, 0.4);
+}
+.lmc-tag--gold::before {
+    background: #f2c14e;
+}
+@keyframes lmc-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .lmc-bob {
+        animation: lmc-bob 7s ease-in-out infinite;
+    }
+    .lmc-bob--b {
+        animation-duration: 5.6s;
+        animation-delay: -1.6s;
+    }
+    .lmc-bob--c {
+        animation-duration: 6.4s;
+        animation-delay: -3.2s;
+    }
+}
+@media (max-width: 768px) {
+    .lmc {
+        grid-template-columns: 1fr;
+    }
+    .lmc-art {
+        order: -1;
+        min-height: 0;
+        height: 200px;
+        padding: 10px 0 0;
+    }
+    .lmc-art svg {
+        width: auto;
+        height: 100%;
+    }
+    .lmc-tag {
+        font-size: 7px;
+    }
+    .lmc-body {
+        padding: 6px 20px 60px;
+    }
+    .lmc-wordmark {
+        margin-top: 16px;
+        font-size: 1.25rem;
+    }
+    .lmc h3 {
+        font-size: 1.05rem;
+    }
+}
+@media (max-width: 420px) {
+    .lmc-ip {
+        flex-wrap: wrap;
+    }
+    .lmc-copy {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 页脚里的“官方”小标签（与 LongerMC 卡片同款） */
+.tag-official {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #08130a;
+    text-shadow: none;
+    background: #63c94a;
+    border: 1px solid #0a1207;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
 
